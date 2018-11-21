@@ -65,6 +65,9 @@ set(CPACK_PACKAGE_VERSION_MAJOR 4)
 set(CPACK_PACKAGE_VERSION_MINOR 0)
 set(CPACK_PACKAGE_VERSION_PATCH 8)
 set(CPACK_PACKAGE_DESCRIPTION "A C++ JSON Parser/Generator Implemented with Boost Spirit")
+set(INSTALL_PKGCONFIG_DIR "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" CACHE PATH "Installation directory for pkgconfig (.pc) files")
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/json_spirit.pc.cmakein
+		${CMAKE_CURRENT_BINARY_DIR}/json_spirit.pc @ONLY)
 include(CPack)
 
 INSTALL(
@@ -80,4 +83,8 @@ INSTALL(
   json_spirit/json_spirit_writer_template.h
   json_spirit/json_spirit_writer_options.h
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/json_spirit)
+
+if(NOT SKIP_INSTALL_FILES AND NOT SKIP_INSTALL_ALL )
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/json_spirit.pc DESTINATION "${INSTALL_PKGCONFIG_DIR}")
+endif()
 
