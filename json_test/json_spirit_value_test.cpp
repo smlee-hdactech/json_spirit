@@ -382,12 +382,12 @@ namespace
         {
             vector< double > vd = list_of( 1.2 )( 1.3 );  test_container_constructor( vd );
             vector< int >    vi = list_of( 1 );           test_container_constructor( vi );
-                             vi = list_of( 1 )( 2 );      test_container_constructor( vi );
-                             vi = list_of( 1 )( 2 )( 3 ); test_container_constructor( vi );
+            vector< int >    vi1 = list_of( 1 )( 2 );      test_container_constructor( vi1 );
+            vector< int >    vi2 = list_of( 1 )( 2 )( 3 ); test_container_constructor( vi2 );
             list< double >   ld = list_of( 1.2 )( 1.3 );  test_container_constructor( ld );
             list< int >      li = list_of( 1 );           test_container_constructor( li );
-                             li = list_of( 1 )( 2 );      test_container_constructor( li );
-                             li = list_of( 1 )( 2 )( 3 ); test_container_constructor( li );
+            list< int >      li1 = list_of( 1 )( 2 );      test_container_constructor( li1 );
+            list< int >      li2 = list_of( 1 )( 2 )( 3 ); test_container_constructor( li2 );
         }
 
     private:
@@ -448,12 +448,12 @@ namespace
             
             vector< double > vd = list_of( 1.2 )( 1.3 );   test_variant_array_constructor< double > ( vd );
             vector< int >    vi = list_of( 1 );            test_variant_array_constructor< int >( vi );
-                             vi = list_of( 1 )( 2 );       test_variant_array_constructor< int >( vi );
-                             vi = list_of( 1 )( 2 )( 3 );  test_variant_array_constructor< int >( vi );
+            vector< int >    vi1 = list_of( 1 )( 2 );       test_variant_array_constructor< int >( vi1 );
+            vector< int >    vi2 = list_of( 1 )( 2 )( 3 );  test_variant_array_constructor< int >( vi2 );
             list< double >   ld = list_of( 1.2 )( 1.3 );   test_variant_array_constructor< double >( ld );
             list< int >      li = list_of( 1 );            test_variant_array_constructor< int >( li );
-                             li = list_of( 1 )( 2 );       test_variant_array_constructor< int >( li );
-                             li = list_of( 1 )( 2 )( 3 );  test_variant_array_constructor< int >( li );
+            list< int >      li1 = list_of( 1 )( 2 );       test_variant_array_constructor< int >( li1 );
+            list< int >      li2 = list_of( 1 )( 2 )( 3 );  test_variant_array_constructor< int >( li2 );
         }
 
     private:
