@@ -4,7 +4,7 @@ PROJECT(json_spirit)
 SUBDIRS(json_spirit)
 INCLUDE_DIRECTORIES(json_spirit)
 
-OPTION(BUILD_STATIC_LIBRARIES "Build static libraries" ON)
+OPTION(BUILD_STATIC_LIBRARIES "Build static libraries" OFF)
 
 OPTION(JSON_SPIRIT_WVALUE_ENABLED "Build with support for unicode types" OFF)
 OPTION(JSON_SPIRIT_MVALUE_ENABLED "Build with support for ascii map types" OFF)
@@ -73,6 +73,7 @@ include(CPack)
 
 INSTALL(
   FILES
+  json_spirit/json_spirit_global.h
   json_spirit/json_spirit.h
   json_spirit/json_spirit_error_position.h
   json_spirit/json_spirit_reader.h
