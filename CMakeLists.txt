@@ -58,20 +58,22 @@ elseif(${CMAKE_CXX_COMPILER_ID} MATCHES Clang)
   message("C++ Flags: ${CMAKE_CXX_FLAGS} link flags: ${CMAKE_CXX_LINK_FLAGS}")
 endif()
 
-message(${CMAKE_INSTALL_INCLUDEDIR})
-
-
 set(CPACK_PACKAGE_VERSION_MAJOR 4)
 set(CPACK_PACKAGE_VERSION_MINOR 1)
 set(CPACK_PACKAGE_VERSION_PATCH 0)
 set(CPACK_PACKAGE_DESCRIPTION "A C++ JSON Parser/Generator Implemented with Boost Spirit")
-set(INSTALL_PKGCONFIG_DIR "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" CACHE PATH "Installation directory for pkgconfig (.pc) files")
+
+if(NOT MSVC)  
+  set(INSTALL_PKGCONFIG_DIR "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" CACHE PATH "Installation directory for pkgconfig (.pc) files")
+endif()
+
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/json_spirit.pc.cmakein
 		${CMAKE_CURRENT_BINARY_DIR}/json_spirit.pc @ONLY)
 include(CPack)
 
 INSTALL(
   FILES
+  json_spirit/json_spirit_global.h
   json_spirit/json_spirit.h
   json_spirit/json_spirit_error_position.h
   json_spirit/json_spirit_reader.h
@@ -85,6 +87,7 @@ INSTALL(
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/json_spirit)
 
 if(NOT SKIP_INSTALL_FILES AND NOT SKIP_INSTALL_ALL )
+  if(NOT MSVC)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/json_spirit.pc DESTINATION "${INSTALL_PKGCONFIG_DIR}")
+  endif()
 endif()
-

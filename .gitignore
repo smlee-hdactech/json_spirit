@@ -31,4 +31,7 @@ json_map_demo/json_map_demo
 json_test/json_test
 
 build/
+.vs/
 _build/
+CMakeSettings.json
+.vscode/
