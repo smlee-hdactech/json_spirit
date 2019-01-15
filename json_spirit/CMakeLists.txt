@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+﻿CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 SET(JSON_SPIRIT_SRCS
   json_spirit_reader.cpp json_spirit_reader.h

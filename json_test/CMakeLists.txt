@@ -1,4 +1,4 @@
-SET(JSON_TEST_SRCS
+﻿SET(JSON_TEST_SRCS
 json_spirit_reader_test.cpp json_spirit_reader_test.h
 json_spirit_stream_reader_test.cpp json_spirit_stream_reader_test.h
 json_spirit_utils_test.cpp json_spirit_utils_test.h
