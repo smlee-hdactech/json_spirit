@@ -1,4 +1,4 @@
-#ifndef JSON_SPIRIT_GLOBAL_H
+﻿#ifndef JSON_SPIRIT_GLOBAL_H
 #define JSON_SPIRIT_GLOBAL_H
 
 #if (defined _WIN32) || (defined _WIN64)

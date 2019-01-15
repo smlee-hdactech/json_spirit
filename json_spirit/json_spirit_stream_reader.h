@@ -1,4 +1,4 @@
-#ifndef JSON_SPIRIT_READ_STREAM
+﻿#ifndef JSON_SPIRIT_READ_STREAM
 #define JSON_SPIRIT_READ_STREAM
 
 //          Copyright John W. Wilkinson 2007 - 2013

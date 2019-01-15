@@ -1,4 +1,4 @@
-#ifndef JSON_SPIRIT_TEST_UTILS
+﻿#ifndef JSON_SPIRIT_TEST_UTILS
 #define JSON_SPIRIT_TEST_UTILS
 
 //          Copyright John W. Wilkinson 2007 - 2013

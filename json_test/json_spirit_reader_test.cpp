@@ -1,4 +1,4 @@
-//          Copyright John W. Wilkinson 2007 - 2013
+ï»¿//          Copyright John W. Wilkinson 2007 - 2013
 // Distributed under the MIT License, see accompanying file LICENSE.txt
 
 // json spirit version 4.06.1
@@ -833,13 +833,13 @@ namespace
 
         test_read( "[\"" + s + "\"]", value );
 
-        assert_eq( value.get_array()[0].get_str(), "äöüß" );
+        assert_eq( value.get_array()[0].get_str(), "éš˜å»»" );
     }
 
     void test_extended_ascii()
     {
         test_extended_ascii( "\\u00E4\\u00F6\\u00FC\\u00DF" );
-        test_extended_ascii( "äöüß" );
+        test_extended_ascii( "éš˜å»»" );
     }
 #endif
 }

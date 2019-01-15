@@ -1,4 +1,4 @@
-#ifndef JSON_SPIRIT_ERROR_POSITION
+﻿#ifndef JSON_SPIRIT_ERROR_POSITION
 #define JSON_SPIRIT_ERROR_POSITION
 
 //          Copyright John W. Wilkinson 2007 - 2013

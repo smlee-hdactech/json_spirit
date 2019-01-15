@@ -1,4 +1,4 @@
-#ifndef JSON_SPIRIT_WRITER_OPTIONS
+﻿#ifndef JSON_SPIRIT_WRITER_OPTIONS
 #define JSON_SPIRIT_WRITER_OPTIONS
 
 //          Copyright John W. Wilkinson 2007 - 2013

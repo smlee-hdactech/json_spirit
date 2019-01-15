@@ -1,4 +1,4 @@
-#ifndef JSON_SPIRIT_READER
+﻿#ifndef JSON_SPIRIT_READER
 #define JSON_SPIRIT_READER
 
 //          Copyright John W. Wilkinson 2007 - 2013
